@@ -41,8 +41,9 @@ const query = [
     }
   ];
   
-  let position = 0;
-  let hit = 0;
+  var position = 0;
+  var hit = 0;
+  var nickName = "";
   
   
   function selection(value){

@@ -72,7 +72,7 @@ span{
     height: 100%;
     min-height: 100%;
 
-    width: 49%;
+    width: 90%;
     min-height: 250px;
 
     border-radius: 15px 0px 0px 15px;
@@ -117,4 +117,35 @@ span{
     font-family: 'BIZ UDPGothic', sans-serif;
     font-size: x-large;
     margin: 2em;
+}
+
+.statusBar{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+}
+
+.statusBar progress{
+    width: 80%;
+    height: 1em;
+}
+
+@media (max-width: 900px) {
+    body{
+        height: auto;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .imgMeme{
+        width: 100%;
+        border-radius: 15px 15px 3px 3px;
+    }
+    .thank{
+        margin-top: 2em;
+    }
 }
