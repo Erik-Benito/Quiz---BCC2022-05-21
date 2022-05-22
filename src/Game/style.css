@@ -38,18 +38,36 @@ button{
     border-radius: 5px;
 
     cursor: pointer;
+    outline: none;
 }
 
 button:hover{
-    transition: 0.1s;
+    transition: 0.3s;
     background-color: #8eecf5;
     color: white;
+    -webkit-box-shadow: 5px 9px 43px -2px rgba(0,0,0,0.19); 
+    box-shadow: 5px 9px 43px -2px rgba(0,0,0,0.19);
 }
 
 span{
     font-family: 'BIZ UDPGothic', sans-serif;
     font-size: 1em;
     line-height: 150%;
+}
+
+progress {
+    border-radius: 10px; 
+    height: 22px;
+    -webkit-box-shadow: 1px 5px 18px -5px rgba(122,122,122,0.8); 
+    box-shadow: 1px 5px 18px -5px rgba(122,122,122,0.8);
+}
+progress::-webkit-progress-bar {
+    background-color: white;
+    border-radius: 7px;
+}
+progress::-webkit-progress-value {
+    background-color: #5089FA;
+    border-radius: 7px;
 }
 
 .container{
@@ -72,7 +90,7 @@ span{
     height: 100%;
     min-height: 100%;
 
-    width: 90%;
+    width: 50%;
     min-height: 250px;
 
     border-radius: 15px 0px 0px 15px;
@@ -132,7 +150,18 @@ span{
 .statusBar progress{
     width: 80%;
     height: 1em;
+    margin: 1em 1em;
 }
+
+
+@keyframes treme {
+    0% {margin-left: 0;}
+    25% {margin-left: 5px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -5px;}
+    100% {margin-left: 0;}
+}
+
 
 @media (max-width: 900px) {
     body{

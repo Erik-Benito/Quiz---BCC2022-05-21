@@ -7,10 +7,10 @@
     <link rel="icon" type="image/x-icon" href="/src/assets/imgs/interrogation-mark.png">
     <title>Quiz</title>
 </head>
-<body onload="attPosition()">
+<body id="body" onload="attPosition()">
     <script src="../script.js"></script>
-    <div class="container">
-        <img class="imgMeme" src="../assets/imgs/capa.jpg" alt="img-meme" />
+    <div id="container" class="container">
+        <img class="imgMeme" id="meme" src="../assets/imgs/capa.jpg" alt="img-meme" />
         <div class="containerQuestions">
             <span>Precisa de Ajuda? <b>BOA SORTE</b></span>
             <div class="question">
@@ -24,7 +24,7 @@
             </div>
             <div class="statusBar">
                 <b id="position" >1/10</b>
-                <progress id="statusBar" value="0" max = "10">
+                <progress id="statusBar" value="1" max = "10">
             </div>
             <div class="thank">
                 <span>Agradecemos você por está aqui jogando :)</span><br/>
