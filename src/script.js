@@ -2,6 +2,7 @@ const query = [
     {
       question: "teste 1",
       correct: "teste1 1",
+      img: "",
       options: [
         "teste1 1",
         "teste1 2",
@@ -39,34 +40,46 @@ const query = [
         "matriz"
       ]
     }
-  ];
+];
   
   var position = 0;
   var hit = 0;
   var nickName = "";
   
   
-  function selection(value){
+  function selection(value, id){
   
-    if(query[position].correct === value){
+    if(query[position].correct === value)
       hit ++;    
-    }
+    else
+      document.getElementById(id).style.animatio = "treme";
+    
+    document.getElementById("position").innerHTML = `${position + 1}/10`;
+    document.getElementById("statusBar").value = position;
     
     attPosition();
   }
   
   function attPosition() {
     
+    console.log(JSON.parse(sessionStorage.getItem('nickName')))
     let question = query[position];
     
-    for(var i = 0; i < 4; i++){
+    document.getElementById("ask").innerText = question.question;
+    
+    for(let i = 0; i < 4; i++){
+
       let button = document.getElementById(i);
-      let value = question.options[1];
-      button.value = value
+      let value = question.options[i];
+
+      button.value = value;
       button.innerText = value;
     }
 
-    document.getElementById("question").innerText = question.question;
-    
     position ++;
+  }
+
+  function setNickName(id) {
+    nickName = document.getElementById(id).value
+    sessionStorage.setItem('nickName', JSON.stringify(nickName));
   }

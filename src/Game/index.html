@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/x-icon" href="/src/assets/imgs/interrogation-mark.png">
+    <title>Quiz</title>
+</head>
+<body onload="attPosition()">
+    <script src="../script.js"></script>
+    <div class="container">
+        <img class="imgMeme" src="../assets/imgs/capa.jpg" alt="img-meme" />
+        <div class="containerQuestions">
+            <span>Precisa de Ajuda? <b>BOA SORTE</b></span>
+            <div class="question">
+                <div id="ask" class="ask"></div>
+                <div class="options">
+                    <button id="0" onclick="selection(this.value, this.id)" value=""></button>
+                    <button id="1" onclick="selection(this.value, this.id)" value=""></button>
+                    <button id="2" onclick="selection(this.value, this.id)" value=""></button>
+                    <button id="3" onclick="selection(this.value, this.id)" value=""></button>
+                </div>
+            </div>
+            <div class="statusBar">
+                <b id="position" >1/10</b>
+                <progress id="statusBar" value="0" max = "10">
+            </div>
+            <div class="thank">
+                <span>Agradecemos você por está aqui jogando :)</span><br/>
+                <span><b>Bruno Carlini | Erik Benito</b></span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

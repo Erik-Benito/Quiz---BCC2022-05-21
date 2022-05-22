@@ -1,35 +1,134 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <title>Quiz</title>
+    <link href="./style.css" rel="stylesheet" >
+    <link rel="icon" type="image/x-icon" href="/src/assets/imgs/interrogation-mark.png">
+    <title>Novo Jogo</title>
 </head>
 <body>
-    <script src="./index.js"></script>
+    <script src="./script.js"></script>
     <div class="container">
-        <img class="imgMeme" src="../src/assets/imgs/capa.jpg" alt="img-meme" />
-        <div class="containerQuestions">
-            <span>Precisa de Ajuda? <b>BOA SORTE</b></span>
-            <div id="question" class="question">
-                <div class="ask"></div>
-                <div class="options">
-                    <button id="0" onclick="selection(this.value)" value=""></button>
-                    <button id="1" onclick="selection(this.value)" value=""></button>
-                    <button id="2" onclick="selection(this.value)" value=""></button>
-                    <button id="3" onclick="selection(this.value)" value=""></button>
-                </div>
-            </div>
-            <div class="statusBar">
-                    1/10
-                <progress value="0" max = "100">
-            </div>
-            <div class="thank">
-                <span>Agradecemos você por está aqui jogando :)</span><br/>
-                <span><b>Bruno Carlini | Erik Benito</b></span>
+        <img class="imgMeme" src="./assets/imgs/newGame.jpg" alt="img-meme" />
+        <div class="containerRigth">
+            <div class="Welcome">
+                <h1>QUIZ SOBRE MEMES!!!</h1>
+                <span>Prove que aquelas horas que você passou nas redes sociais, valeram apena e alcance o nosso pódio.</span>
+            </div>            
+            <form class="players">
+                <label for="players">
+                    Nickname:
+                    <input onblur="setNickName(this.id)" onkeypress="setNickName(this.id)" id="nickName" type="text" placeholder="..." />
+                </label>
+                <a href="http://127.0.0.1:5500/src/game/index.html?">
+                    <div class="link">Começar</div>
+                </a>
+            </form>           
+            <div class="victoryTable">
+                <table class="styled-table">
+                    <tr>
+                        <th>Rank</th>
+                        <th>NickName</th>
+                        <th>Acertos</th>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    <tr>
+                        <td>Vulgo pp</td>
+                        <td>Br Carlini</td>
+                        <td>-8000</td>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                                        <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                                        <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                                        <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Deus</td>
+                        <td>Erik Benito</td>
+                        <td>+8000</td>
+                    </tr>
+                    
+                </table>
             </div>
         </div>
-    </div>
+    </div>    
 </body>
 </html>

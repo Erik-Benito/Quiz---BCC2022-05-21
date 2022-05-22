@@ -7,6 +7,7 @@
     padding: 0px;
 }
 
+
 body{
     display: flex;
     flex-direction: column;
@@ -19,37 +20,25 @@ body{
 
     padding: 2rem 3rem;
 
-    background-color: #5089FA;
+    background-color: #06D6A0;
 }
 
-button{
-    text-align: center;
+a{ text-decoration: none;}
 
-    width: 40%;
+input{
+    width: 100%;
     height: 3em;
-
-    margin: 10px 5px 0px 5px;
-
-    font-family: 'Akshar', sans-serif;
-    font-size: larger;
-
-    background-color: white;
-    border: solid 2px #8eecf5;
-    border-radius: 5px;
-
-    cursor: pointer;
-}
-
-button:hover{
-    transition: 0.1s;
-    background-color: #8eecf5;
-    color: white;
-}
-
-span{
-    font-family: 'BIZ UDPGothic', sans-serif;
+        
     font-size: 1em;
-    line-height: 150%;
+
+    border: none;
+    border-bottom: 2px solid #06D6A0;
+    outline: none;
+}
+
+
+label{
+    font-family: 'BIZ UDPGothic', sans-serif;
 }
 
 .container{
@@ -72,80 +61,159 @@ span{
     height: 100%;
     min-height: 100%;
 
-    width: 90%;
-    min-height: 250px;
+    width: 49%;
+    min-height: 400px;
 
     border-radius: 15px 0px 0px 15px;
 }
 
-.containerQuestions{
+.containerRigth{
     display: flex;
     flex-direction: column;
 
-    justify-content: space-between;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 
-    width: 100%;
+    width: 50%;
     height: 100%;
 
     padding: 2em;
 }
 
-.question{
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 100%;
+.Welcome {
+    max-width: 600px;
 }
 
-.options{
+.Welcome h1{
+    font-family: 'Akshar', sans-serif;
+    font-weight: 700;
+    font-size: 4em;    
+}
+
+.Welcome span{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 20px;    
+}
+
+.link{
     display: flex;
     flex-direction: row;
 
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 
-    flex-wrap: wrap;
+    width: 100%;
+    height: 2em;
 
-    width: 80%;
-}
+    margin: 10px 0px 0px 0px;
 
-.ask{
-    font-family: 'BIZ UDPGothic', sans-serif;
-    font-size: x-large;
-    margin: 2em;
-}
+    background-color: white;
+    border: solid 2px #06D6A0;
+    border-radius: 5px;
 
-.statusBar{
-    display: flex;
-    flex-direction: column;
+    font-family: 'Akshar', sans-serif;
+    font-size: 2em;
+    color: #009879;
     
-    justify-content: center;
-    align-items: center;
-
-    margin: 10px;
+    cursor: pointer;
 }
 
-.statusBar progress{
-    width: 80%;
-    height: 1em;
+a:hover > .link{
+    transition: 0.3s;
+    color: white;
+    background-color: #06D6A0;
 }
 
-@media (max-width: 900px) {
+.players{
+    width: 75%;
+
+    text-align: initial;
+}
+
+.victoryTable{
+    width: 79%;
+    max-height: 50%;
+    
+    padding: 0em 1em;
+    
+    overflow-y: scroll;
+}
+
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+th {
+    position: sticky;
+    top: 0;
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.styled-table tbody tr.active-row {
+   font-weight: bold;
+    color: #009879;
+}
+ 
+@keyframes treme {
+    0% {margin-left: 0;}
+    25% {margin-left: 5px;}
+    50% {margin-left: 0;}
+    75% {margin-left: -5px;}
+    100% {margin-left: 0;}
+  }
+
+
+@media  screen and (max-width: 900px) {
     body{
         height: auto;
     }
+    .imgMeme{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 3px 3px;
+    }
     .container{
         flex-direction: column;
+        height:auto ;
     }
-    .imgMeme{
-        width: 100%;
-        border-radius: 15px 15px 3px 3px;
-    }
-    .thank{
-        margin-top: 2em;
+    .containerRigth{
+        width: auto;
     }
 }

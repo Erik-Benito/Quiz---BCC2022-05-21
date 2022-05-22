@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Akshar&family=BIZ+UDPGothic&family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100vh;
+
+    padding: 2rem 3rem;
+
+    background-color: #5089FA;
+}
+
+button{
+    text-align: center;
+
+    width: 40%;
+    height: 3em;
+
+    margin: 10px 5px 0px 5px;
+
+    font-family: 'Akshar', sans-serif;
+    font-size: larger;
+
+    background-color: white;
+    border: solid 2px #8eecf5;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover{
+    transition: 0.1s;
+    background-color: #8eecf5;
+    color: white;
+}
+
+span{
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-size: 1em;
+    line-height: 150%;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: white;
+    -webkit-box-shadow: 3px 9px 26px 1px rgba(0,0,0,0.66); 
+    box-shadow: 3px 9px 26px 1px rgba(0,0,0,0.66);
+    border-radius: 15px;
+}
+
+.imgMeme{
+    height: 100%;
+    min-height: 100%;
+
+    width: 90%;
+    min-height: 250px;
+
+    border-radius: 15px 0px 0px 15px;
+}
+
+.containerQuestions{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 2em;
+}
+
+.question{
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.options{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    width: 80%;
+}
+
+.ask{
+    font-family: 'BIZ UDPGothic', sans-serif;
+    font-size: x-large;
+    margin: 2em;
+}
+
+.statusBar{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    margin: 10px;
+}
+
+.statusBar progress{
+    width: 80%;
+    height: 1em;
+}
+
+@media (max-width: 900px) {
+    body{
+        height: auto;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .imgMeme{
+        width: 100%;
+        border-radius: 15px 15px 3px 3px;
+    }
+    .thank{
+        margin-top: 2em;
+    }
+}
