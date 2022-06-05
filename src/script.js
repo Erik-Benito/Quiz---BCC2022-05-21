@@ -1,8 +1,8 @@
 // Array de objetos dos quais, represantam as imagens
 const query = [
   {
-    question: "teste 1",
-    correct: "teste1 1",
+    question: "titulo",
+    correct: "5 conto",
     img: 'https://catracalivre.com.br/wp-content/uploads/2016/03/1658.jpg',
     options: [
       "teste1 1",
@@ -115,7 +115,7 @@ function attPosition() {
   let question = query[position] ?? -1;
 
   if(question === - 1)
-    return window.location.href = "http://127.0.0.1:5500/src/endPoint/index.html?"
+    return window.location.href = "/src/endPoint/index.html"
   
   document.getElementById("ask").innerText = question.question;
   document.getElementById("meme").src = question.img;
@@ -136,9 +136,13 @@ function createUser() {
 }
 
 // funcão que armazena no navegador da pessoa seu NickName para que assim não se perca ao atualizar a pagina
-function setNickName(id) {
+function setNickName(e,id) {
   nickName =  document.getElementById(id).value;
   sessionStorage.setItem('nickName', JSON.stringify(nickName));
+
+  console.log(e)
+  if(e.key === 'enter')
+    window.location.href = "./src/Game/index.html";
 }
 
 function loadTable() {
