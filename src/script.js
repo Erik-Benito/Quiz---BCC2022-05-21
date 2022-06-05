@@ -247,3 +247,65 @@ function loadTable() {
   }
   
 }
+
+function endPoint(){
+  switch(hit){
+    case 0:
+      document.getElementById("imgResult").src = "https://st2.depositphotos.com/1864495/11264/i/950/depositphotos_112646148-stock-photo-internet-meme-why-you-no.jpg"
+
+    break;
+
+    case 1:
+      document.getElementById("imgResult").src = "https://imagens1.ne10.uol.com.br/blogsne10/mundobit/uploads/2013/01/template_memegenerator_memezecapagodinho.jpg"
+
+    break;
+
+    case 2:
+      document.getElementById("imgResult").src = "https://conteudo.imguol.com.br/c/entretenimento/9f/2021/04/28/bbb-21-gil-diz-que-vai-dar-baile-em-sarah-quando-deixar-a-casa-1619649292831_v2_450x337.jpg"
+
+    break;
+
+    case 3:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/564x/1e/d5/c3/1ed5c339e9dbfa74248428e6241751eb.jpg"
+
+    break;
+
+    case 4:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/236x/ba/7e/1b/ba7e1bca9c1b7daf4318b5a49e047c87.jpg"
+
+    break;
+
+    case 5:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/236x/05/94/1c/05941cdd5ce0ba21b44d87102baf8d4b.jpg"
+
+    break;
+
+    case 6:
+      document.getElementById("imgResult").src = "https://t.ctcdn.com.br/RXx6_SJ1v9-w_E2UlD3a528OyIE=/i360801.png"
+
+    break;
+
+    case 7:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/originals/e0/27/cd/e027cd754b1c2a06ce4dd16df5a68c39.jpg"
+
+    break;
+
+    case 8:
+      document.getElementById("imgResult").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusxSfPCBcqUrGHjWd3aSpSNS-HjL6smZFhw&usqp=CAU"
+
+    break;
+
+    case 9:
+      document.getElementById("imgResult").src = ""
+
+    break;
+
+    case 10:
+      document.getElementById("imgResult").src = ""
+
+    break;
+  }
+
+  document.getElementById("hit").innerText = `SUA PONTUAÇÃO = ${hit}/10`
+
+}
