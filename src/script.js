@@ -1,14 +1,14 @@
 // Array de objetos dos quais, represantam as imagens
 const query = [
   {
-    question: "Quantos reais o ",
+    question: "Quantos reais o Poeta Galo Cego ganhou do repóter ?",
     correct: "R$5,00",
     img: 'https://catracalivre.com.br/wp-content/uploads/2016/03/1658.jpg',
     options: [
-      "teste1 1",
-      "teste1 2",
-      "teste1 3",
-      "teste1 4"
+      "5,00 conto",
+      "15,00 conto",
+      "8,00 conto",
+      "+ de 8 mil conto"
     ]
   },
   {
