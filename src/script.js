@@ -1,8 +1,8 @@
 // Array de objetos dos quais, represantam as imagens
 const query = [
   {
-    question: "titulo",
-    correct: "5 conto",
+    question: "Quantos reais o ",
+    correct: "R$5,00",
     img: 'https://catracalivre.com.br/wp-content/uploads/2016/03/1658.jpg',
     options: [
       "teste1 1",
