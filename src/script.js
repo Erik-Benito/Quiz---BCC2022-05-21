@@ -56,7 +56,7 @@ function selection(value, id) {
 
   if (query[position].correct === value) {
     hit++;
-    sessionStorage.setItem('hits', JSON.stringify(hit));
+    sessionStorage.setItem('hits', hit);
     createUser();
     document.getElementById("body").style.backgroundColor = "#06D6A0"
     document.getElementById(id).style.backgroundColor = "#06D6A0"
@@ -99,6 +99,7 @@ function selection(value, id) {
 
   setTimeout(() => {
     position++;
+    sessionStorage.setItem('position', position);
     document.getElementById("body").style.backgroundColor = coolors[parseInt(Math.random() * (coolors.length - 0) + 0)]
     document.getElementById("container").style.animation = "";
     document.getElementById(id).style.backgroundColor = "white"
@@ -112,14 +113,19 @@ function selection(value, id) {
 
 // Funcão que atualiza a posicao do jogador no array 
 function attPosition() {
-  let question = query[position] ?? -1;
+  let question = query[parseInt(sessionStorage.getItem('position'))] ?? -1;
 
-  if(question === - 1)
-    return window.location.href = "/src/endPoint/index.html"
+  if(question === - 1){
+    sessionStorage.setItem('nickName', "");
+    sessionStorage.setItem('position', "");
+    sessionStorage.setItem('hits', "");
+    return window.location.href = "../endPoint/index.html"
+  }
   
   document.getElementById("ask").innerText = question.question;
   document.getElementById("meme").src = question.img;
 
+  sessionStorage.setItem('position', position);
   for (let i = 0; i < 4; i++) {
 
     let button = document.getElementById(i);
@@ -132,30 +138,46 @@ function attPosition() {
 }
 
 function createUser() {
-  sessionStorage.setItem('user', JSON.stringify( {nickName: JSON.parse(sessionStorage.getItem('nickName')), hit: JSON.parse(sessionStorage.getItem('hits')) }));
+  sessionStorage.setItem('user',  {nickName: sessionStorage.getItem('nickName'), hit: sessionStorage.getItem('hits') });
 }
 
 // funcão que armazena no navegador da pessoa seu NickName para que assim não se perca ao atualizar a pagina
-function setNickName(e,id) {
-  nickName =  document.getElementById(id).value;
-  sessionStorage.setItem('nickName', JSON.stringify(nickName));
+function startGame(e) {
+  if(e.key === 'Enter' || e.keyCode === 13 || e === startGame){
 
-  console.log(e)
-  if(e.key === 'enter')
-    window.location.href = "./src/Game/index.html";
+    nickName =  document.getElementById("nickName").value;
+
+    if(nickName === '')
+      return alert("Preencha o noma de Usuario")
+  
+    sessionStorage.setItem('nickName', nickName);
+    
+    return window.location.href = "./Game/index.html"    
+
+  }
+  
 }
 
 function loadTable() {
   
-  let players = JSON.parse(sessionStorage.getItem('userTables') ?? "[]")
+  let players = sessionStorage.getItem('userTables') ?? "[]"
+
+  if(sessionStorage.getItem('position') !== 0){
+    let response = window.confirm("Outro game em andamento, gostaria de voltar ?")
+    if(response)
+      window.location.href = "./Game/index.html" 
+    else 
+      sessionStorage.setItem('position', "0");
+  }
+
 
   if(!!sessionStorage.getItem('user')){
     
-    if( JSON.stringify(players[players.length - 1]) !== sessionStorage.getItem('user')) {    
-      sessionStorage.setItem('userTables', JSON.stringify([...players, JSON.parse(sessionStorage.getItem('user'))]));
+    if( players[players.length - 1] !== sessionStorage.getItem('user')) {    
+      sessionStorage.setItem('userTables', [...players, sessionStorage.getItem('user')]);
     }
   
-    players = JSON.parse(sessionStorage.getItem('userTables'))
+    players = sessionStorage.getItem('userTables')
 
     players.sort(function(a,b) {
       if(a.hit < b.hit)
