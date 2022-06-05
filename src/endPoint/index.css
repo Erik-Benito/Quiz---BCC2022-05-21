@@ -40,6 +40,10 @@ body{
     border-radius: 15px;
 }
 
+#imgResult {
+    width: 250px;
+}
+
 .imgMeme{
     height: 100%;
     min-height: 100%;

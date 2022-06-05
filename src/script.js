@@ -2,8 +2,8 @@
 const query = [
   {
     question: "Quantos reais o Poeta Galo Cego ganhou do repóter ?",
-    correct: "R$5,00",
-    img: 'https://catracalivre.com.br/wp-content/uploads/2016/03/1658.jpg',
+    correct: "5,00 conto",
+    img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm99aTlcU8A6ECPaIUXGzAv-QrWQF89J7Nw4zKcWxMwalERUqlrjxwh_mhbo_0spZWf_Q&usqp=CAU',
     options: [
       "5,00 conto",
       "15,00 conto",
@@ -12,36 +12,102 @@ const query = [
     ]
   },
   {
-    question: "teste 2",
-    correct: "teste2 2",
-    img: "https://i.guim.co.uk/img/media/908edfd0eb30a60f9cdd73a936b6a36b60d67681/0_130_2150_1290/master/2150.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=a0f9fe85ec89bffe7c82a088ffea8ef5",
+    question: "Que frase foi dita pelo cidadão da imagem a esquerda, que virou meme ?",
+    correct: "Então morre diabo",
+    img: "http://s2.glbimg.com/1SLMXydpxD_rnGUDap0UNHuHn-Q=/smart/e.glbimg.com/og/ed/f/original/2016/06/16/morrediabo.jpg",
     options: [
-      "teste2 1",
-      "teste2 2",
-      "teste2 3",
-      "teste2 4"
+      "To com fome, idai",
+      "Quero merenda",
+      "Então morre diabo",
+      "1+1=2,5"
     ]
   },
   {
-    question: "teste 3",
-    correct: "teste2 3",
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqzjbola1cM2UHbgeKcrsoPS_tMbAyg9BARQ&usqp=CAU",
+    question: "O cidadão da imagem a esquerda, mais conhecido como Seloko Cachoeira, diz que rouba lanchonete de: ",
+    correct: "pistola",
+    img: "https://i.ytimg.com/vi/H4emrWxvmig/maxresdefault.jpg",
     options: [
-      "teste2 1",
-      "teste2 2",
-      "teste2 3",
-      "teste2 4"
+      "faca",
+      "cassetete",
+      "arma de mentira",
+      "pistola"
     ]
   },
   {
-    question: "aula de algoritmo, qual a materia de hoje ?",
-    correct: "matriz",
-    img: "https://files.nsctotal.com.br/s3fs-public/2019-08/MTX01_0.jpg?nk1pZS3h9LJZOqvkHvlwINcM1Jqe8TzQ",
+    question: "Moradora de rua da imagem ao lado é mais conhecida como Policia...",
+    correct: "Policia militar, federal, civil",
+    img: "https://i.ytimg.com/vi/zu2vzQAJR0E/hqdefault.jpg",
     options: [
-      "vector",
-      "for",
-      "varivel",
-      "matriz"
+      "Ambiental",
+      "Maritima",
+      "Policia militar, federal, civil",
+      "Aerea"
+    ]
+  },
+  {
+    question: "Meme da imagem ao lado mais conhecido como, Senhora, Senhora. Ela estava sendo acusada de fazer o que ?",
+    correct: "Bater o ponto na assembleia, e sair",
+    img: "https://upload.wikimedia.org/wikipedia/pt/2/2c/Senhora_%28meme%29.jpg",
+    options: [
+      "Bater o ponto na assembleia, e sair",
+      "Trafico de droga",
+      "Assalto a mão armada",
+      "Não pagou o boleto da Claro"
+    ]
+  },
+  {
+    question: "O meme ao lado ficou conhecido pelo apelido:",
+    correct: "AuAu",
+    img: "https://i.ytimg.com/vi/NpHpPIGQvGQ/maxresdefault.jpg",
+    options: [
+      "Robertinho",
+      "Xuxa",
+      "Zezinho",
+      "AuAu"
+    ]
+  },
+  {
+    question: "Cidadão diz que sua profissão é:",
+    correct: "Ladrão",
+    img: "https://i.ytimg.com/vi/XkZ6g6YvyUQ/hqdefault.jpg",
+    options: [
+      "Dormir",
+      "Ladrão",
+      "Modelo",
+      "Desenvoldedor de Software"
+    ]
+  },
+  {
+    question: "Meme ao lado ficou mais conhecido como:",
+    correct: "Nunca nem vi",
+    img: "https://images.uncyc.org/pt/thumb/1/14/Nuncanemvi.jpg/150px-Nuncanemvi.jpg.png",
+    options: [
+      "Senhora, Senhora",
+      "Seloko Cachoeira",
+      "Nunca nem vi",
+      "Então morre diabo"
+    ]
+  },
+  {
+    question: "Cidadão ao lado diz que prendeu...",
+    correct: "Batman e o diabo",
+    img: "https://i.ytimg.com/vi/qGPbRJpSZjY/mqdefault.jpg",
+    options: [
+      "Batman e o diabo",
+      "Coringa",
+      "Pinguim",
+      "Chaves"
+    ]
+  },
+  {
+    question: "Meme ao lado ficou mais conhecido como:",
+    correct: "Não sei",
+    img: "https://i.ytimg.com/vi/CwSGCX9slGs/hqdefault.jpg",
+    options: [
+      "Então morre diabo",
+      "Senhora, senhora",
+      "Nunca nem vi",
+      "Não sei"
     ]
   }
 ];
@@ -202,4 +268,55 @@ function loadTable() {
     });
   }
   
+}
+
+function endPoint(){
+  switch(hit){
+    case 0:
+      document.getElementById("imgResult").src = "https://st2.depositphotos.com/1864495/11264/i/950/depositphotos_112646148-stock-photo-internet-meme-why-you-no.jpg"
+    break;
+
+    case 1:
+      document.getElementById("imgResult").src = "https://imagens1.ne10.uol.com.br/blogsne10/mundobit/uploads/2013/01/template_memegenerator_memezecapagodinho.jpg"
+    break;
+
+    case 2:
+      document.getElementById("imgResult").src = "https://conteudo.imguol.com.br/c/entretenimento/9f/2021/04/28/bbb-21-gil-diz-que-vai-dar-baile-em-sarah-quando-deixar-a-casa-1619649292831_v2_450x337.jpg"
+    break;
+
+    case 3:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/564x/1e/d5/c3/1ed5c339e9dbfa74248428e6241751eb.jpg"
+    break;
+
+    case 4:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/236x/ba/7e/1b/ba7e1bca9c1b7daf4318b5a49e047c87.jpg"
+    break;
+
+    case 5:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/236x/05/94/1c/05941cdd5ce0ba21b44d87102baf8d4b.jpg"
+    break;
+
+    case 6:
+      document.getElementById("imgResult").src = "https://t.ctcdn.com.br/RXx6_SJ1v9-w_E2UlD3a528OyIE=/i360801.png"
+    break;
+
+    case 7:
+      document.getElementById("imgResult").src = "https://i.pinimg.com/originals/e0/27/cd/e027cd754b1c2a06ce4dd16df5a68c39.jpg"
+    break;
+
+    case 8:
+      document.getElementById("imgResult").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusxSfPCBcqUrGHjWd3aSpSNS-HjL6smZFhw&usqp=CAU"
+    break;
+
+    case 9:
+      document.getElementById("imgResult").src = ""
+    break;
+
+    case 10:
+      document.getElementById("imgResult").src = ""
+    break;
+  }
+
+  document.getElementById("hit").innerText = `SUA PONTUAÇÃO = ${hit}/10`
+
 }
