@@ -19,9 +19,9 @@
             <form class="players">
                 <label for="players">
                     Nickname:
-                    <input onblur="setNickName(this.id)" onkeypress="setNickName(this.id)" id="nickName" type="text" placeholder="..." />
+                    <input  onkeypress="setNickName(event, id)" id="nickName" type="text" placeholder="..." />
                 </label>
-                <a href="http://127.0.0.1:5500/src/game/index.html?">
+                <a href="../src/Game/index.html">
                     <div class="link">Começar</div>
                 </a>
             </form>           
