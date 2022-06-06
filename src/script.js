@@ -49,7 +49,7 @@ const query = [
   {
     question: "Meme da imagem ao lado mais conhecido como, Senhora, Senhora. Ela estava sendo acusada de fazer o que ?",
     correct: "Bater o ponto na assembleia, e sair",
-    img: "https://upload.wikimedia.org/wikipedia/pt/2/2c/Senhora_%28meme%29.jpg",
+    img: "https://i.makeagif.com/media/10-06-2015/oODGpv.gif",
     options: [
       "Bater o ponto na assembleia, e sair",
       "Trafico de droga",
@@ -194,6 +194,7 @@ function attPosition() {
     return window.location.href = "../index.html"
 
   document.getElementById("ask").innerText = question.question;
+
   document.getElementById("meme").src = question.img;
 
   for (let i = 0; i < 4; i++) {

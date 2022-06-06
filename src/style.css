@@ -205,9 +205,25 @@ th {
     }
     .container{
         flex-direction: column;
-        height:auto ;
+        height:auto;
+        width: auto;
     }
     .containerRigth{
-        width: auto;
+        width: 100%;
+        padding: 0em;
+    }
+    .Welcome{
+        width: 92%;
+        margin-bottom: 1em;
+    }
+    .victoryTable{
+        width: 80%;
+        padding: 0em;
+    }
+    .link{
+        width: 80%;
+    }
+    label{
+        width: 80%;
     }
 }

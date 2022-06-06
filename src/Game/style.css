@@ -177,4 +177,18 @@ progress::-webkit-progress-value {
     .thank{
         margin-top: 2em;
     }
+    .containerQuestions{
+        width: auto;
+    }
+    .ask{
+        margin: 2em 0em;
+    }
+    .options{
+        width: auto;
+    }
+    button{
+        width: 100%;
+        height: auto;
+        min-height: 5em;
+    }
 }

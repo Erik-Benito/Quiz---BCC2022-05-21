@@ -116,3 +116,33 @@ a:hover {
     color: white;
     background-color: #06D6A0;
 }
+
+@media (max-width: 900px) {
+    body{
+        height: auto;
+        width: auto;
+        padding: 2em 2em;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .imgMeme{
+        width: 100%;
+        border-radius: 15px 15px 3px 3px;
+    }
+    .thank{
+        margin-top: 2em;
+    }
+    .containerRigth{
+        width: auto;
+    }
+    .link{
+        height: auto;
+        padding: .2em 0em ;
+    }
+    a{
+        margin-top: 1em;
+        width: auto;
+    }
+
+}
