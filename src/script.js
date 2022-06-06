@@ -186,9 +186,11 @@ function startGame(event) {
 function attPosition() {
   let question = query[position] ?? -1;
 
-  if (question === - 1) {
-    return window.location.href = "../endPoint/index.html"
-  }
+  if (question === - 1) 
+    return window.location.href = "../endPoint/index.html";
+
+  if(sessionStorage.getItem('nickname') === '')
+    return window.location.href = "../index.html"
 
   document.getElementById("ask").innerText = question.question;
   document.getElementById("meme").src = question.img;
@@ -299,6 +301,6 @@ function endPoint() {
       ]
     )
   );
-  sessionStorage.setItem('nickName', "");
+  sessionStorage.setItem('nickname', "");
   sessionStorage.setItem('hits', "");
 }
