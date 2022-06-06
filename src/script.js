@@ -25,25 +25,25 @@ const query = [
     ]
   },
   {
-    question: "O cidadão da imagem a esquerda, mais conhecido como Seloko Cachoeira, diz que rouba lanchonete de: ",
-    correct: "pistola",
+    question: "O cidadão da imagem a esquerda, ficou conhecido como: ",
+    correct: "Slk cachoeira",
     img: "https://i.ytimg.com/vi/H4emrWxvmig/maxresdefault.jpg",
     options: [
-      "faca",
-      "cassetete",
-      "arma de mentira",
-      "pistola"
+      "Waltar",
+      "ari eu nao to nem ai",
+      "Slk cachoeira",
+      "Zé polvinho"
     ]
   },
   {
-    question: "Moradora de rua da imagem ao lado é mais conhecida como Policia...",
-    correct: "Policia militar, federal, civil",
-    img: "https://i.ytimg.com/vi/zu2vzQAJR0E/hqdefault.jpg",
+    question: "Segundo este matador de onça, como elas fazem ao pé do ouvido ?",
+    correct: "MINHAAAU AAUURRRR",
+    img: "https://midiamax.uol.com.br/wp-content/uploads/2021/12/arquivos_noticias_2017_fev_mucho_macho_serjao_berranteiro.jpg",
     options: [
-      "Ambiental",
-      "Maritima",
-      "Policia militar, federal, civil",
-      "Aerea"
+      "MIAUUUUUUUU",
+      "AU AU",
+      "MINHAAAU AAUURRRR",
+      "PÓ PÓ PÓ"
     ]
   },
   {
@@ -58,14 +58,14 @@ const query = [
     ]
   },
   {
-    question: "O meme ao lado ficou conhecido pelo apelido:",
-    correct: "AuAu",
-    img: "https://i.ytimg.com/vi/NpHpPIGQvGQ/maxresdefault.jpg",
+    question: "O meme ao lado ficou conhecido apos:",
+    correct: "Tomar um choque",
+    img: "https://www.opovo.com.br/noticiasimages/app/noticia_146418291334/2017/02/21/262624/Uma-das-cenas-mais-clssicas-da-TV-brasileira-completa-21-anos.jpg",
     options: [
-      "Robertinho",
-      "Xuxa",
-      "Zezinho",
-      "AuAu"
+      "Tomar um choque",
+      "comer uma uva",
+      "Vender uva ilegalmente",
+      "Roubar uva"
     ]
   },
   {
@@ -91,13 +91,13 @@ const query = [
     ]
   },
   {
-    question: "Cidadão ao lado diz que prendeu...",
-    correct: "Batman e o diabo",
-    img: "https://i.ytimg.com/vi/qGPbRJpSZjY/mqdefault.jpg",
+    question: "Quem estava estava tacando o pau no carrinho ?",
+    correct: "Marcos",
+    img: "https://c.tenor.com/BgmFJAcbFrQAAAAC/carrinho-marcos-tacalhe-pau.gif",
     options: [
-      "Batman e o diabo",
-      "Coringa",
-      "Pinguim",
+      "Marcos",
+      "Pedrinho",
+      "Lohane Vêkanandre Sthephany Smith Bueno de HA HA HA de Raio Laser bala de Icekiss",
       "Chaves"
     ]
   },
@@ -178,6 +178,7 @@ function startGame(event) {
       return alert("Deve ser preenchido o campo de nickName!!!");
 
     sessionStorage.setItem('nickname', nick);
+    sessionStorage.setItem('hits', 0);
     window.location.href = "./game/index.html"
   }
 }
@@ -243,7 +244,7 @@ function endPoint() {
 
   switch (parseInt(sessionStorage.getItem('hits'))) {
     case 0:
-      document.getElementById("imgResult").src = "https://st2.depositphotos.com/1864495/11264/i/950/depositphotos_112646148-stock-photo-internet-meme-why-you-no.jpg"
+      document.getElementById("imgResult").src = "https://i.pinimg.com/564x/c6/dc/fc/c6dcfcdad8401eabea7cb537671a629c.jpg"
     break;
 
     case 1:
@@ -267,7 +268,7 @@ function endPoint() {
     break;
 
     case 6:
-      document.getElementById("imgResult").src = "https://t.ctcdn.com.br/RXx6_SJ1v9-w_E2UlD3a528OyIE=/i360801.png"
+      document.getElementById("imgResult").src = "https://i.pinimg.com/originals/a7/39/d0/a739d02f04b58ff2ca349e5c4f5ee0ed.png"
     break;
 
     case 7:
@@ -275,7 +276,7 @@ function endPoint() {
     break;
 
     case 8:
-      document.getElementById("imgResult").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTusxSfPCBcqUrGHjWd3aSpSNS-HjL6smZFhw&usqp=CAU"
+      document.getElementById("imgResult").src = "http://www.criarmeme.com.br/meme/meme-41173-Minha-nota-e-de-mais--de-8-mill.jpg"
     break;
 
     case 9:
@@ -302,5 +303,5 @@ function endPoint() {
     )
   );
   sessionStorage.setItem('nickname', "");
-  sessionStorage.setItem('hits', "");
+  sessionStorage.setItem('hits', "0");
 }
