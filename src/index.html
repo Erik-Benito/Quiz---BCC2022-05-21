@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./style.css" rel="stylesheet" >
-    <link rel="icon" type="image/x-icon" href="/src/assets/imgs/interrogation-mark.png">
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/interrogation-mark.png">
     <title>Novo Jogo</title>
 </head>
 <body  onload="loadTable()">
@@ -16,15 +16,13 @@
                 <h1>QUIZ SOBRE MEMES!!!</h1>
                 <span>Prove que aquelas horas que você passou nas redes sociais, valeram apena e alcance o nosso pódio.</span>
             </div>            
-            <form class="players">
-                <label for="players">
-                    Nickname:
-                    <input  onkeypress="startGame(event)" id="nickName" type="text" placeholder="..." />
-                </label>
-                <a onclick="startGame(startGame)">
-                    <div class="link">Começar</div>
-                </a>
-            </form>           
+            <label for="players">
+                Nickname:
+                <input onkeypress="startGame(event)" id="nickName" type="text"/>
+            </label>
+            <button class="link" onclick="startGame('startGame')"> 
+                Começar
+            </button>
             <div class="victoryTable">
                 <table class="styled-table" id="table">
                     <tr>

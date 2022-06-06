@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/x-icon" href="/src/assets/imgs/interrogation-mark.png">
     <title>Fim de Game</title>
-    
 </head>
+
 <body onload="endPoint()">
     <script src="../script.js"></script>
     <div class="container">
-        <img class="imgMeme" src="../assets/imgs/endGame.jpeg" alt="img-meme" />
+        <img id="imgResult" class="imgMeme" src="" alt="img-meme" />
         <div class="containerRigth">
             <div class="Welcome">
                 <h1>FIM DE JOGO</h1>
             </div>
-            <img id="imgResult" src="" alt="img">
-            <p id="hit"></p>
-            <a href="../index.html">
+            <span  class="pontos1" >Seu resultado:</span> 
+            <span class="pontos" id="hit"></span>
+            <span class="textFim" >
+                Obrigado por jogar </br> esperamos que tenha gostado </br> 
+            </span>
+            <a href="../index.html" class="link">
                 <div class="link">Novo Jogo</div>
             </a>
-
-            
         </div>
     </div>
 </body>
+
 </html>
