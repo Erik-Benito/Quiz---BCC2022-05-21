@@ -277,11 +277,11 @@ function endPoint() {
     break;
 
     case 9:
-      document.getElementById("imgResult").src = ""
+      document.getElementById("imgResult").src = "https://images-na.ssl-images-amazon.com/images/I/71UdPXPpjoL.png"
     break;
 
     case 10:
-      document.getElementById("imgResult").src = ""
+      document.getElementById("imgResult").src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTe7q1oDHkpq2sVo4AxzKQZ-wzTb2z8cvUxA&usqp=CAU"
     break;
 
   }
